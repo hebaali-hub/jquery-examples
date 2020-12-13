@@ -1,0 +1,97 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 4000px;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left:0;
+    transition: left 0.5s ease-in-out;
+}
+
+.slidebar{
+    width:240px;
+    height: 100%;
+    background-color: #d74056;
+    position: absolute;
+    left: -240px;
+}
+.open_slidebar{left: 240px;}
+.slidebar ul {
+   list-style: none;
+}
+.slidebar ul li{
+    display: block;
+    padding: 15px 20px;
+    background-color:rgba(213, 208, 208, 0.919);
+    border-bottom: 2px solid #d74056;
+    transition: 0.5s all ease-in-out;
+}
+.slidebar ul li a{
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    color: #d74056;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.5s all ease-in-out;
+}
+.slidebar ul li:hover {
+ background-color:rgb(83, 82, 82);
+ color:rgba(213, 208, 208, 0.919);
+}
+.slidebar ul li:hover a{
+    color:rgba(213, 208, 208, 0.919);
+}
+.main_content{
+  width:100%;
+  height:100%;
+  overflow: hidden;
+}
+
+.area{
+   width:5%;
+   height: 100%;
+   float: left;
+   background-color:rgb(83, 82, 82);
+   position: relative;
+   
+}
+.sidebar_toggle{
+
+background-color: #d74056;
+
+border-radius: 3px;
+
+padding: 20px;
+
+position: absolute;
+
+top: 10px;
+
+left: 9px;
+
+z-index: 1000;
+}
+.area span{
+    display: block;
+    width: 71%;
+    height: 2px;
+    border-bottom:2px solid rgba(213, 208, 208, 0.919);
+    z-index: 1100;
+    cursor: pointer;
+}
+.area span:first-of-type{position: absolute;top: 10px;left: 5px;}
+.area span:nth-of-type(2){position: absolute;top: 19px;left: 5px;}
+.area span:last-of-type{position: absolute;top: 28px;left: 5px;}
+
+.content{
+  padding-left: 60px;
+  width:95%;
+  float: left;
+}
